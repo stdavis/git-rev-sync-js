@@ -48,9 +48,9 @@ return the result of `git rev-parse HEAD`; optional `filePath` parameter can be 
 
 return the current branch; optional `filePath` parameter can be used to run the command against a repo outside the current working directory
 
-#### `git.count()` &rarr; &lt;Number&gt;
+#### `git.count([branch])` &rarr; &lt;Number&gt;
 
-return the count of commits across all branches; this method will fail if the `git` command is not found in `PATH`
+returns the count of commits across all branches; optional `branch` parameter can be used to limit the count to a specific branch; this method will fail if the `git` command is not found in `PATH`
 
 #### `git.date()` &rarr; &lt;Date&gt;
 

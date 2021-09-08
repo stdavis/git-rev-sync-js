@@ -168,8 +168,8 @@ function date() {
   return new Date(_command('git', ['log', '--no-color', '-n', '1', '--pretty=format:"%ad"']));
 }
 
-function count() {
-  return parseInt(_command('git', ['rev-list', '--all', '--count']), 10);
+function count(branch) {
+  return parseInt(_command('git', ['rev-list', '--count', branch || '--all']), 10);
 }
 
 function log() {

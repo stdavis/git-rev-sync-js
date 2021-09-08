@@ -19,6 +19,10 @@ result = git.count();
 assert.notEqual(result, 0, 'count() returns a non-zero number');
 assert.equal(Math.abs(result), result, 'count() returns a positive number');
 
+result = git.count('HEAD');
+assert.notEqual(result, 0, 'count() returns a non-zero number');
+assert.equal(Math.abs(result), result, 'count() returns a positive number');
+
 result = git.date();
 assert.equal(result instanceof Date, true, 'date() returns a date');
 
